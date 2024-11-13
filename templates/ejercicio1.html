@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Ejercicio 1</h1>
+    <form method="post">
+        <label>Nota 1:</label><input type="number" name="nota1" required><br>
+        <label>Nota 2:</label><input type="number" name="nota2" required><br>
+        <label>Nota 3:</label><input type="number" name="nota3" required><br>
+        <label>Asistencia (%):</label><input type="number" name="asistencia" required><br>
+        <button type="submit">Enviar</button>
+    </form>
+    {% if promedio is not none %}
+    <h2>Promedio: {{ promedio }}</h2>
+    <h2>Estado: {{ estado }}</h2>
+    {% endif %}
+    <button onclick="location.href='/'">Volver al Menú Principal</button>
+</body>
+</html>
+
+
+
